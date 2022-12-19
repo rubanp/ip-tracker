@@ -8,6 +8,9 @@ export default defineConfig({
     HstNuxt(),
   ],
   storyMatch: [
-    'components/Stories/*.story.vue'
-  ]
+    'components/Story/*.story.vue'
+  ],
+  theme: {
+    favicon: '/histoire.svg'
+  }
 })
