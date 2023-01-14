@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const props = defineProps(['location'])
-const key = "AIzaSyCliJ2zB-Pymj0UW3xM0x6tXSE3N3c607w"
+const key = "AIzaSyAzIBl6qbKNnyfwsw7AglyXzgUmI3BISGg"
 const url =
     ref(`https://www.google.com/maps/embed/v1/place?key=${key}&q=${props.location}`);
 console.log(props.location);
