@@ -1,20 +1,17 @@
+<script setup>
+const locationString = ref(null);
+function log(place) {
+  locationString.value = place;
+  console.log(place);
+}
+</script>
+
 <template>
-  <div>
-    <p>site under construction</p>
-  </div>
+  <Header />
+  <IPSearch @location="log" />
+  <GoogleMap :location="locationString" v-if="locationString" />
 </template>
 
-<style>
-div {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+<style scoped>
 
-p {
-  font-family: sans-serif;
-  font-size: 48px;
-}
 </style>
