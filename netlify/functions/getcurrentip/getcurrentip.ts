@@ -4,10 +4,8 @@ import fetch from 'node-fetch'
 export const handler: Handler = async (event: HandlerEvent, context: HandlerContext) => {
     let data;
     try {
-        const ip = event.queryStringParameters.ip
-        const ipData = await
-            fetch(`https://api.ipgeolocation.io/ipgeo?apiKey=${process.env.IP_GEOLOCATION_API_KEY}&ip=${ip}`)
-        data = await ipData.json();
+        const ip = await fetch(`https://api.ipgeolocation.io/ipgeo?apiKey=${process.env.IP_GEOLOCATION_API_KEY}`)
+        data = await ip.json();
     } catch (error) {
         data = error;
     }
